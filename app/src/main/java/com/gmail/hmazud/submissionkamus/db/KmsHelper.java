@@ -36,9 +36,12 @@ public class KmsHelper {
     public Cursor searchQueryByName(String query, boolean english){
         String DATABASE_TABLE = english ? ENGLISH : INDONESIA;
         return sqLiteDatabase.rawQuery("SELECT * FROM "
-                + DATABASE_TABLE + " WHERE "
-                + DBHelper.FIELD_WORD + "LIKE '%"
-                + query.trim() + "%'", null);
+                + DATABASE_TABLE
+                + " WHERE "
+                + DBHelper.FIELD_WORD
+                + " LIKE '%"
+                + query.trim()
+                + "%'", null);
     }
 
     public ArrayList<KmsModel> getDataByName(String search, boolean english) {
@@ -79,7 +82,7 @@ public class KmsHelper {
 
     public Cursor queryAllData(boolean english) {
         String DATABASE_TABLE = english ? ENGLISH : INDONESIA;
-        return sqLiteDatabase.rawQuery("SELECT * FROM"
+        return sqLiteDatabase.rawQuery("SELECT * FROM "
                 + DATABASE_TABLE
                 + " ORDER BY "
                 + DBHelper.FIELD_ID
@@ -122,7 +125,8 @@ public class KmsHelper {
         String sql_query = "INSERT INTO "
                 + DATABASE_TABLE + " ("
                 + DBHelper.FIELD_WORD + ", "
-                + DBHelper.FIELD_TRANSLATE + "} VALUES (?, ?)";
+                + DBHelper.FIELD_TRANSLATE
+                + ") VALUES (?, ?)";
 
         sqLiteDatabase.beginTransaction();
 

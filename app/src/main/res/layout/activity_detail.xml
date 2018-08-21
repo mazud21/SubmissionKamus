@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Detail">
+
+    <TextView
+        android:id="@+id/textWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Translate"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+</LinearLayout>

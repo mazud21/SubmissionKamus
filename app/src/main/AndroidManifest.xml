@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".PreloadActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,8 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".English" />
-        <activity android:name=".Indonesia"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".English"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".Indonesia" />
+        <activity android:name=".Detail" />
     </application>
 
 </manifest>
